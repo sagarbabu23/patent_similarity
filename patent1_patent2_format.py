@@ -14,7 +14,7 @@ import sklearn
 
 
 
-patent = pd.ExcelFile("D:\dolcera python patents\Patent_similarity.xlsx")
+patent = pd.ExcelFile("D:\python patents\Patent_similarity.xlsx")
 patent.sheet_names
 df1= patent.parse("Sheet2")
 df2= patent.parse("Sheet1")
@@ -119,7 +119,7 @@ for col in  dftest['Independent Claims']:
     print(col,similars1,file=open("givenformat.csv","a",encoding="utf-8"))  
     
     
-final_print = pd.read_csv("D:\dolcera python patents\givenformat.csv")
+final_print = pd.read_csv("D:\python patents\givenformat.csv")
 
 final_print.iloc[:,0]=dftest.iloc[:,0]
 final_print.head()
